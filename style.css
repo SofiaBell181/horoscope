@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #121410;
+    font-family: 'Open Sans', sans-serif;
+}
+  
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles{
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+    -webkit-user-select: none;
+}
+
+#stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles{
+    border-radius: 0 0 3px 3px;
+}
+
+
+#total_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+#head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#heading {
+    z-index: 6;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    padding: 0 30px;
+}
+
+#photo {
+    margin: 30px 0 0 0;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.turnPhoto {
+    animation: 12s linear 0s normal none infinite running turnPhoto;
+    -webkit-animation: 12s linear 0s normal none infinite running turnPhoto;
+}
+
+    @keyframes turnPhoto {
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes turnPhoto {
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(360deg);
+        }
+    } 
+
+#card {
+    z-index: 6;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 550px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: #141720ad;
+    background-image: url('https://images.unsplash.com/photo-1476111021705-ac3b3304fe20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 100px;
+}
+
+#container:hover {
+    box-shadow: #384a5796 6px -6px 12px 1px;
+    transition: linear 2s;
+    background-image: url('https://images.pexels.com/photos/821718/pexels-photo-821718.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+}
+
+#zodiac {
+    font-size: 27px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#par {
+    font-size: 14px;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+    overflow: auto;
+}
+
+#container img {
+    filter: contrast(120%);
+    width: 150px;
+    margin: 10px 0;
+}
+
+#btn {
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #141720ad;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    padding: 8px 5px;
+    letter-spacing: 2px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #30313596;
+}
+
+@media all and (max-width: 500px) {
+    #heading { 
+        font-size: 25px;
+        padding: 0 10px;
+    }
+
+    #photo {
+        width: 200px;;
+    }
+
+    #container {
+        width: 330px;
+        height: 500px;
+        margin-right: 25px;
+        padding-bottom: 150px;
+    }
+
+    #par {
+        font-size: 14px;
+        padding: 15px;
+        letter-spacing: 0.4px;
+        line-height: 25px;
+    }
+}
+
+@media all and (max-width: 350px) {
+    #container {
+        width: 300px;
+        height: 500px;
+    }
+}
